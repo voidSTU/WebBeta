@@ -1,0 +1,283 @@
+/* -----------------------------
+   全域排版安全
+----------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 2.8em; text-align: center; }
+header .subtitle { margin-top: 5px; font-size: 1.2em; font-weight: 300; text-align: center; }
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 10px 0; }
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+    color: #555;
+    font-size: 0.85em;
+}
+
+/* -----------------------------
+   首頁專屬樣式
+----------------------------- */
+.homepage .hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 30px 0;
+}
+
+.homepage .index-logo {
+    width: 200px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 12px;
+}
+
+.homepage .hero-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* -----------------------------
+   動畫按鈕 (全站統一) - 顏色加強版
+----------------------------- */
+.btn-animated {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;          
+    height: 70px;          
+    padding: 0 20px;
+    font-size: 18px;       
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* 初始陰影 */
+}
+
+.btn-animated .default-text,
+.btn-animated .hover-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-animated .default-text {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.btn-animated .hover-text {
+    top: 150%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.btn-animated:hover .default-text {
+    top: -50%;
+    opacity: 0;
+}
+
+.btn-animated:hover .hover-text {
+    top: 50%;
+    opacity: 1;
+}
+
+.btn-animated:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* 顏色分類 (加強 hover 變化) */
+.btn-green { background-color: #28a745; }
+.btn-green:hover { background-color: #1e7e34; box-shadow: 0 6px 10px rgba(0,0,0,0.25); }
+
+.btn-blue { background-color: #007bff; }
+.btn-blue:hover { background-color: #0056b3; box-shadow: 0 6px 10px rgba(0,0,0,0.25); }
+
+.btn-gray { background-color: #6c757d; }
+.btn-gray:hover { background-color: #495057; box-shadow: 0 6px 10px rgba(0,0,0,0.25); }
+
+
+/* -----------------------------
+   query.html / form.html 共用排版
+----------------------------- */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.main-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.main-layout-grid .filter-panel {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.main-layout-grid .results-panel {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.main-layout-grid .case-panel {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.filter-panel, .results-panel, .case-panel, .form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-layout .filter-panel { flex: 1; min-width: 280px; }
+.main-layout .results-panel { flex: 2; }
+
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.form-group textarea { min-height: 150px; }
+
+.law-card {
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+.law-card h3 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 5px;
+}
+.law-card.replenish-content {
+    border-left-color: #ffc107;
+    background-color: #fff9e6;
+}
+
+.combined-relevance-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+.combined-relevance-list li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+}
+
+.case-card {
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.case-title { color: #dc3545; margin-top: 0; font-size: 1.2em; padding-bottom: 5px; border-bottom: 1px solid #f0f0f0; margin-bottom: 10px; }
+.case-content { font-size: 0.95em; color: #555; margin-bottom: 15px; }
+.case-source a, .case-video a { color: #007bff; text-decoration: none; font-weight: bold; }
+
+.video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 15px; border-radius: 6px; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+.loading-message, .error-message, .note {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-style: italic;
+    line-height: 1.4;
+}
+.loading-message { background-color: #e9f5ff; color: #007bff; border-left: 3px solid #007bff; }
+.error-message { background-color: #f8d7da; color: #721c24; border-left: 3px solid #dc3545; }
+
+.button-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+    width: 100%;
+}
+
+/* -----------------------------
+   響應式設計
+----------------------------- */
+@media (max-width: 768px) {
+    header h1 { font-size: 2em; }
+    header .subtitle { font-size: 1em; }
+
+    .main-layout-grid { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 20px; }
+    .main-layout-grid .filter-panel, .main-layout-grid .results-panel, .main-layout-grid .case-panel { grid-column: 1 / 2; grid-row: auto; }
+    .main-layout { flex-direction: column; gap: 20px; }
+    .filter-panel, .results-panel, .case-panel { padding: 20px; }
+    .button-footer { flex-direction: column; align-items: center; gap: 10px; }
+    .button-footer a, .button-footer button { width: 80%; min-width: unset; }
+}
