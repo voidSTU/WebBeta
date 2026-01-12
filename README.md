@@ -7,9 +7,6 @@
 [![image](https://hackmd.io/_uploads/ry1SGNS4Wx.png)
 ](https://voidstu.github.io/BCTP/)
 
-### File Structure
-![image](https://hackmd.io/_uploads/B1HIGVSNbx.png)
-
 ---
 
 ### JSON Files
