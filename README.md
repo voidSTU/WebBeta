@@ -1,70 +1,73 @@
-# BCTP  
-**Bullying Consequence Transparency Platform**
+# WebBeta: BCTP for Performance
+
+(Bullying Consequence Transparency Platform – Beta Version)
+
+The **Beta version** quiz page is different from the original version.  
+This version focuses on faster and more direct performance feedback.
+
+---
 
 ## GitHub Project / Front-end
 
 ### Project Website
-[![image](https://hackmd.io/_uploads/ry1SGNS4Wx.png)
-](https://voidstu.github.io/BCTP/)
+<a href="https://voidstu.github.io/WebBeta/">
+  <img width="200" height="200" alt="upload_f86deddc586149676dc228396aff69b0" src="https://github.com/user-attachments/assets/4baa18b3-a930-4954-98ea-649a51a6e818" />
+</a>
 
 ---
 
 ### JSON Files
 
-[LawJson.json](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/LawJson.json)  
-Contains laws related to different bullying behaviors.
+[LawJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/LawJson.json)  
+This file stores laws that are linked to different bullying behaviors.
 
-[CaseJson.json](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/CaseJson.json)  
-Contains real cases related to different bullying behaviors.
+[CaseJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/CaseJson.json)  
+This file stores real cases that are linked to different bullying behaviors.
 
-[QuizJson.json](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/QuizJson.json)  
-Quiz data related to bullying laws and cases, used to test user understanding.
+[QuizJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/QuizJson.json)  
+This file stores quiz questions related to bullying laws and cases.
 
 ---
 
 ### HTML Files
 
-[index.html](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/index.html)  
-Introduces the purpose of the platform and explains what the system aims to do.
+[index.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/index.html)  
+This page explains the purpose of the platform and tells the user (the bully) what the system is designed to do.
 
-[query.html](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/query.html)  
-Allows the user (bully) to select the behavior they have committed, then read the related laws and view corresponding cases.
+[query.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/query.html)  
+On this page, the user (the bully) chooses the bullying behavior they have committed.  
+The system then displays related laws and cases based on the selected behavior.
 
-[quiz.html](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/quiz.html)  
-Tests whether the user has studied the content carefully.  
-The quiz questions are generated based on the data shown on the `query.html` page.  
+[quiz.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/quiz.html)  
+This page tests whether the user has carefully studied the content shown on the `query.html` page.  
+The quiz content is generated from the selected behavior.  
 The user must score **over 60 points** to proceed to `form.html`.
 
-[form.html](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/form.html)  
-Allows the user (bully) to write a reflection on their bullying behavior and upload it to the record system.
+In this **Beta version**, the correct answer is shown immediately after each question without confirmation.  
+This design allows the system to demonstrate performance more directly and efficiently.
+
+[form.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/form.html)  
+On this page, the user (the bully) writes a reflection on their bullying behavior.  
+The reflection is then uploaded and saved as a record.
 
 ---
 
-### CSS Files
+### CSS File
 
-[style.css](https://raw.githubusercontent.com/voidSTU/BCTP/refs/heads/main/style.css)  
-Defines the layout and visual style of the HTML pages.
+[style.css](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/style.css)  
+This file controls the layout and visual design of the HTML pages.
 
 ---
 
 ### Logo
-(Platform logo design used in the website)
-![LogoJPG](https://hackmd.io/_uploads/B1HGMVS4Zg.jpg)
+
+<img width="200" height="200" alt="WebBetaLogo" src="https://github.com/user-attachments/assets/5079d688-579e-4c70-98d7-e8642c83255e" />
 
 ---
 
 ## Google Sheets Apps Script / Back-end
 
-Receives data sent from `form.html`, including:
-- Timestamp  
-- School Name  
-- Student Name  
-- Reflection Content  
-- Behavior Type  
-
-All data is stored and managed using Google Sheets via Apps Script.
-
-```javascript=
+~~~javascript
 const SHEET_NAME = "record";  // 設定要操作的試算表工作表名稱
 
 function doPost(e) {
@@ -111,4 +114,6 @@ function doPost(e) {
   }
 }
 
-```
+~~~
+
+This back-end script receives the **timestamp, school name, student name, reflection content, and behavior type** sent from `form.html`, and records them into Google Sheets.
