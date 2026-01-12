@@ -11,7 +11,7 @@ This version focuses on faster and more direct performance feedback.
 
 ### Project Website
 <a href="https://voidstu.github.io/WebBeta/">
-  <img width="200" height="200" alt="upload_f86deddc586149676dc228396aff69b0" src="https://github.com/user-attachments/assets/4baa18b3-a930-4954-98ea-649a51a6e818" />
+  <img width="200" height="200" src="https://github.com/user-attachments/assets/4baa18b3-a930-4954-98ea-649a51a6e818" />
 </a>
 
 ---
@@ -61,7 +61,7 @@ This file controls the layout and visual design of the HTML pages.
 
 ### Logo
 
-<img width="200" height="200" alt="WebBetaLogo" src="https://github.com/user-attachments/assets/5079d688-579e-4c70-98d7-e8642c83255e" />
+<img width="200" height="200" src="https://github.com/user-attachments/assets/5079d688-579e-4c70-98d7-e8642c83255e" />
 
 ---
 
