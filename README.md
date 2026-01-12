@@ -10,6 +10,7 @@ This version focuses on faster and more direct performance feedback.
 ## GitHub Project / Front-end
 
 ### Project Website
+
 <a href="https://voidstu.github.io/WebBeta/">
   <img width="200" height="200" src="https://github.com/user-attachments/assets/4baa18b3-a930-4954-98ea-649a51a6e818" />
 </a>
