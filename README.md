@@ -1,10 +1,12 @@
 # WebBeta  
-### BCTP Demonstration Version  
-**Bullying Consequence Transparency Platform – Beta Demo**
+### BCTP Performance Demonstration Version
 
-A demonstration version of **BCTP** designed for faster system presentation.
+**WebBeta** is the demonstration version of **BCTP (Bullying Consequence Transparency Platform)**.
 
-Unlike the original version, this beta directly displays quiz answers to allow users to experience the complete platform workflow more quickly during demonstrations.
+This version is designed for **presentation and performance demonstration purposes**, providing a faster interaction flow than the standard BCTP platform.
+
+The primary difference is the **quiz system**:  
+correct answers are displayed immediately after each question, allowing direct feedback and smoother demonstrations.
 
 ---
 
@@ -19,24 +21,38 @@ https://voidstu.github.io/WebBeta/
 
 ---
 
+# Key Difference from Original BCTP
+
+### Standard BCTP
+- Requires users to complete quizzes independently
+- Measures actual comprehension
+- Focuses on educational assessment
+
+### WebBeta
+- Displays correct answers immediately
+- Provides instant feedback
+- Optimized for demonstrations and performance presentations
+
+---
+
 # Project Structure
 
 ## Front-end (GitHub Pages)
 
-The front-end is built using static HTML, CSS, and JSON-driven content rendering.
+Built using static **HTML, CSS, and JSON-based content files**.
 
 ---
 
 ## Data Files
 
 ### [LawJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/LawJson.json)
-Contains legal regulations associated with different bullying behaviors.
+Contains legal regulations and consequences linked to bullying behaviors.
 
 ### [CaseJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/CaseJson.json)
-Contains real-world bullying-related case references.
+Contains real-world bullying cases for educational reference.
 
 ### [QuizJson.json](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/QuizJson.json)
-Stores quiz questions generated according to selected bullying behavior.
+Stores quiz questions generated according to selected behaviors.
 
 ---
 
@@ -48,11 +64,11 @@ Introduces the platform purpose and explains the system workflow.
 ---
 
 ### [query.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/query.html)
-Allows users to select bullying behavior and review:
+Allows users to select bullying behaviors and review:
 
 - Related laws
 - Legal consequences
-- Real-world cases
+- Real-life cases
 
 ---
 
@@ -62,32 +78,25 @@ Knowledge assessment page.
 
 Features:
 
-- Questions generated dynamically from selected behavior
-- Passing score requirement: **60 points or above**
-- Immediate answer display after each question
+- Dynamically generated questions
+- Based on selected behavior data
+- Passing score: **60 points or above**
 
-### Demo Version Difference
-
-Unlike the original BCTP version:
-
-- Answers are displayed immediately
-- No confirmation delay
-- Faster access to the next stage
-
-This design is intended only for demonstration and presentation purposes.
+**Beta Demonstration Feature:**  
+Correct answers are revealed immediately after each question without confirmation, enabling faster system presentation.
 
 ---
 
 ### [form.html](https://raw.githubusercontent.com/voidSTU/WebBeta/refs/heads/main/form.html)
 
-Reflection submission page for recording:
+Reflection submission page where users provide:
 
 - School name
 - Student name
 - Reflection content
-- Selected behavior type
+- Selected bullying behavior
 
-Submitted data is stored in the record system.
+The submission is then recorded in the backend system.
 
 ---
 
@@ -97,8 +106,9 @@ Submitted data is stored in the record system.
 
 Controls:
 
-- Layout structure
-- Responsive interface behavior
+- Page layout
+- Typography
+- Responsive design
 - Visual consistency
 
 ---
@@ -111,15 +121,15 @@ Controls:
 
 # Back-end (Google Apps Script)
 
-The platform uses **Google Apps Script + Google Sheets** as a lightweight backend storage system.
-
-Submitted data includes:
+The backend receives form data submitted from `form.html` and records:
 
 - Timestamp
 - School Name
 - Student Name
 - Reflection Content
 - Behavior Type
+
+All records are stored using **Google Sheets + Apps Script**.
 
 ---
 
@@ -177,23 +187,25 @@ function doPost(e) {
 
 # Workflow Overview
 
-1. User enters the platform  
+1. User enters platform  
 2. Selects bullying behavior  
-3. Reviews legal information and cases  
-4. Completes quiz assessment  
-5. Receives immediate answer display  
-6. Achieves passing score (60+)  
-7. Writes reflection report  
-8. Reflection is stored in Google Sheets
+3. Reviews laws and real cases  
+4. Completes quiz with instant-answer feedback  
+5. Achieves passing score (60+)  
+6. Writes reflection report  
+7. Reflection is stored in Google Sheets
 
 ---
 
 # Purpose
 
-This beta version is intended for:
+WebBeta demonstrates the core BCTP workflow in a faster, presentation-friendly format.
 
-- System demonstrations
-- Presentation use
-- Faster walkthrough of platform features
+It is designed for:
 
-It preserves the original educational workflow while reducing interaction time for easier demonstration.
+- Live demonstrations
+- Project showcases
+- Performance evaluation
+- System testing
+
+while preserving the educational structure of the original platform.
